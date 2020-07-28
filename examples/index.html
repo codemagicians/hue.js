@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="../hue.js"></script>
+    <script type="text/javascript" src="InputComponent.js"></script>
+    <script type="text/javascript" src="ImageComponent.js"></script>
+    <script>
+        window.onload = function() {
+            Hue.use(() => new InputComponent());
+            Hue.use(() => new ImageComponent());
+        }
+    </script>
+    <style>
+        .label {
+            color: rgb(0, 99, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <p>Hue is a tiny framework written by Sergey Shelekhov using vanilla javascript</p>
+    <p class="label">This is a test document. This is green because Hue supports scoped CSS. If you happen to have<br>a class with same name as global class in your Hue component it won't affect global styles.</p>
+    <br><br>
+    <myInput label="Firstname" className="label" firstName="Alex"></myInput>
+    <br><br>
+    <myInput label="Lastname" className="label" firstName="Michael"></myInput>
+    <br><br>
+    <myImage
+        src="developer.png"
+        imgDescription="5 Things Developers Don’t Share About Making Successful Apps"
+    ></myImage>
+</body>
+</html>
